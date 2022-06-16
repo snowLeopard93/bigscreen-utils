@@ -1,0 +1,24 @@
+{
+  "name": "bigscreen-utils",
+  "version": "0.0.1",
+  "description": "大屏工具方法",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "bigscreen",
+    "utils"
+  ],
+  "author": "huangzx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:snowLeopard93/bigscreen-utils.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "jest": "^28.1.1"
+  }
+}
