@@ -72,3 +72,38 @@ export function isNullOrUndefinedOrEmptyString(value) {
         return false;
     }
 }
+
+/**
+ * 判断是否是JSON字符串
+ * @param {*} str
+ * @returns
+ */
+export function isJSONStr(str) {
+    if (typeof str === "string") {
+        try {
+            const obj = JSON.parse(str);
+            if (typeof obj === "object" && obj) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (e) {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}
+
+/**
+ * 保留指定位数
+ * @param {*} str
+ * @param {*} fixed
+ */
+ export function parseFloatByFixed(str, fixed) {
+    if (Number.isNaN(str) || Number.isNaN(Number.parseFloat(str))) {
+      return "";
+    } else {
+      return Number.parseFloat(str).toFixed(fixed);
+    }
+  }
