@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+// eslint-disable-next-line import/extensions
 import * as bigscreenUtil from '../index.js';
 
 test('parseFloat', () => {
@@ -17,13 +19,11 @@ test('parseInt', () => {
 });
 
 test('addLeftZero', () => {
-  expect(bigscreenUtil.addLeftZero(500, 5)).toBe("00500");
+  expect(bigscreenUtil.addLeftZero(500, 5)).toBe('00500');
 });
 
 test('equallyDivide', () => {
-  expect(bigscreenUtil.equallyDivide(
-    ["1", "2", "3", "4", "5", "6"], 2
-  )).toEqual([["1", "2"], ["3", "4"], ["5", "6"]]);
+  expect(bigscreenUtil.equallyDivide(['1', '2', '3', '4', '5', '6'], 2)).toEqual([['1', '2'], ['3', '4'], ['5', '6']]);
 });
 
 test('isNullOrUndefined', () => {
@@ -35,23 +35,23 @@ test('isNullOrUndefined', () => {
 test('isNullOrUndefinedOrEmptyString', () => {
   expect(bigscreenUtil.isNullOrUndefinedOrEmptyString(null)).toBe(true);
   expect(bigscreenUtil.isNullOrUndefinedOrEmptyString(undefined)).toBe(true);
-  expect(bigscreenUtil.isNullOrUndefinedOrEmptyString("")).toBe(true);
-  expect(bigscreenUtil.isNullOrUndefined("10")).toBe(false);
+  expect(bigscreenUtil.isNullOrUndefinedOrEmptyString('')).toBe(true);
+  expect(bigscreenUtil.isNullOrUndefined('10')).toBe(false);
 });
 
 test('isJSONStr', () => {
   expect(bigscreenUtil.isJSONStr('{"a": "1"}')).toBe(true);
   expect(bigscreenUtil.isJSONStr(null)).toBe(false);
   expect(bigscreenUtil.isJSONStr(undefined)).toBe(false);
-  expect(bigscreenUtil.isJSONStr("")).toBe(false);
-  expect(bigscreenUtil.isJSONStr("10")).toBe(false);
+  expect(bigscreenUtil.isJSONStr('')).toBe(false);
+  expect(bigscreenUtil.isJSONStr('10')).toBe(false);
 });
 
 test('parseFloatByFixed', () => {
-  expect(bigscreenUtil.parseFloatByFixed(10000.888, 2)).toBe("10000.89");
-  expect(bigscreenUtil.parseFloatByFixed("10000.666", 2)).toBe("10000.67");
-  expect(bigscreenUtil.parseFloatByFixed("10000", 2)).toBe("10000.00");
-  expect(bigscreenUtil.parseFloatByFixed('--')).toBe("");
-  expect(bigscreenUtil.parseFloatByFixed(null)).toBe("");
-  expect(bigscreenUtil.parseFloatByFixed(undefined)).toBe("");
-})
+  expect(bigscreenUtil.parseFloatByFixed(10000.888, 2)).toBe('10000.89');
+  expect(bigscreenUtil.parseFloatByFixed('10000.666', 2)).toBe('10000.67');
+  expect(bigscreenUtil.parseFloatByFixed('10000', 2)).toBe('10000.00');
+  expect(bigscreenUtil.parseFloatByFixed('--')).toBe('');
+  expect(bigscreenUtil.parseFloatByFixed(null)).toBe('');
+  expect(bigscreenUtil.parseFloatByFixed(undefined)).toBe('');
+});

@@ -3,11 +3,10 @@
  * @param {*} str
  */
 export function parseFloat(str) {
-    if (Number.isNaN(str) || Number.isNaN(Number.parseFloat(str))) {
-        return 0;
-    } else {
-        return Number.parseFloat(str);
-    }
+  if (Number.isNaN(str) || Number.isNaN(Number.parseFloat(str))) {
+    return 0;
+  }
+  return Number.parseFloat(str);
 }
 
 /**
@@ -16,11 +15,10 @@ export function parseFloat(str) {
  * @returns
  */
 export function parseInt(str) {
-    if (Number.isNaN(str) || Number.isNaN(Number.parseInt(str))) {
-        return 0;
-    } else {
-        return Number.parseInt(str);
-    }
+  if (Number.isNaN(str) || Number.isNaN(Number.parseInt(str, 10))) {
+    return 0;
+  }
+  return Number.parseInt(str, 10);
 }
 
 /**
@@ -29,8 +27,8 @@ export function parseInt(str) {
  * @param {*} maxLength
  */
 export function addLeftZero(num, maxLength) {
-    let numStr = num.toString();
-    return numStr.padStart(maxLength, "0");
+  const numStr = num.toString();
+  return numStr.padStart(maxLength, '0');
 }
 
 /**
@@ -39,12 +37,12 @@ export function addLeftZero(num, maxLength) {
  * @param {*} subGroupLength
  */
 export function equallyDivide(array, subGroupLength) {
-    let index = 0;
-    let newArray = [];
-    while (index < array.length) {
-        newArray.push(array.slice(index, (index += subGroupLength)));
-    }
-    return newArray;
+  let index = 0;
+  const newArray = [];
+  while (index < array.length) {
+    newArray.push(array.slice(index, (index += subGroupLength)));
+  }
+  return newArray;
 }
 
 /**
@@ -53,11 +51,10 @@ export function equallyDivide(array, subGroupLength) {
  * @returns
  */
 export function isNullOrUndefined(value) {
-    if (value === null || value === undefined) {
-        return true;
-    } else {
-        return false;
-    }
+  if (value === null || value === undefined) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -66,11 +63,10 @@ export function isNullOrUndefined(value) {
  * @returns
  */
 export function isNullOrUndefinedOrEmptyString(value) {
-    if (value === null || value === undefined || value === "") {
-        return true;
-    } else {
-        return false;
-    }
+  if (value === null || value === undefined || value === '') {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -79,20 +75,19 @@ export function isNullOrUndefinedOrEmptyString(value) {
  * @returns
  */
 export function isJSONStr(str) {
-    if (typeof str === "string") {
-        try {
-            const obj = JSON.parse(str);
-            if (typeof obj === "object" && obj) {
-                return true;
-            } else {
-                return false;
-            }
-        } catch (e) {
-            return false;
-        }
-    } else {
-        return false;
+  if (typeof str === 'string') {
+    try {
+      const obj = JSON.parse(str);
+      if (typeof obj === 'object' && obj) {
+        return true;
+      }
+      return false;
+    } catch (e) {
+      return false;
     }
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -100,10 +95,9 @@ export function isJSONStr(str) {
  * @param {*} str
  * @param {*} fixed
  */
- export function parseFloatByFixed(str, fixed) {
-    if (Number.isNaN(str) || Number.isNaN(Number.parseFloat(str))) {
-      return "";
-    } else {
-      return Number.parseFloat(str).toFixed(fixed);
-    }
+export function parseFloatByFixed(str, fixed) {
+  if (Number.isNaN(str) || Number.isNaN(Number.parseFloat(str))) {
+    return '';
   }
+  return Number.parseFloat(str).toFixed(fixed);
+}
