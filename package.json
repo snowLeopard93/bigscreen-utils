@@ -3,10 +3,11 @@
   "version": "0.0.2-beta",
   "description": "大屏工具方法",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "jest",
-    "lint": "eslint index.js src test"
+    "lint": "eslint index.js src test",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "keywords": [
     "bigscreen",
