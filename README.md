@@ -17,7 +17,7 @@ $ npm install bigscreen-utils
 import { parseFloatByFixed } from "bigscreen-utils";
 
 // 2、只引入部分
-import { parseFloatByFixed } from "bigscreen-utils/dist/numberUtil";
+import { parseFloatByFixed } from "bigscreen-utils/src/util/numberUtil";
 
 const floatValue = parseFloatByFixed(10000.888, 2)
 console.log(floatValue); // 10000.89
