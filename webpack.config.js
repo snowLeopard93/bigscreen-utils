@@ -11,6 +11,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
+    filename: '[name].min.js',
     // libraryTarget: 'commonjs2',
     libraryTarget: 'umd',
   },

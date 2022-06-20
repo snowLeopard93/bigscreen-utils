@@ -1,6 +1,6 @@
 import NumberFunc from '../func/NumberFunc';
 
-const numberFunc = new NumberFunc();
+// const numberFunc = new NumberFunc();
 
 /**
  * 将字符串转换成整型
@@ -8,7 +8,7 @@ const numberFunc = new NumberFunc();
  * @returns
  */
 export function parseInt(str) {
-  if (numberFunc.isNaN(str)) {
+  if (NumberFunc.isNaN(str)) {
     return 0;
   }
   return Number.parseInt(str, 10);
@@ -20,10 +20,10 @@ export function parseInt(str) {
  * @returns
  */
 export function parseFloat(str) {
-  if (numberFunc.isNaN(str)) {
+  if (NumberFunc.isNaN(str)) {
     return 0;
   }
-  return Number.parseFloat(str);
+  return NumberFunc.parseFloat(str);
 }
 
 /**
@@ -33,8 +33,79 @@ export function parseFloat(str) {
  * @returns
  */
 export function parseFloatByFixed(str, fixed) {
-  if (numberFunc.isNaN(str)) {
+  if (NumberFunc.isNaN(str)) {
     return '';
   }
-  return Number.parseFloat(str).toFixed(fixed);
+  return NumberFunc.parseFloat(str).toFixed(fixed);
+}
+
+/**
+ * 加千分位分隔符
+ * @param {*} str
+ * @returns
+ */
+export function toLocaleString(str) {
+  if (NumberFunc.isNaN(str)) {
+    return '';
+  }
+  return NumberFunc.parseFloat(str).toLocaleString('en-US');
+}
+
+/**
+ * 返回保留小数点后一位的字符串
+ * @param {*} str
+ * @returns
+ */
+export function parseFloatByFixedOneDecimalPlace(str) {
+  return parseFloatByFixed(str, 1);
+}
+
+/**
+ * 返回保留小数点后两位的字符串
+ * @param {*} str
+ * @returns
+ */
+export function parseFloatByFixedTwoDecimalPlace(str) {
+  return parseFloatByFixed(str, 2);
+}
+
+/**
+ * 返回百分比数值字符串
+ * @param {*} str
+ * @param {*} fixed
+ * @returns
+ */
+export function getPercentNumber(str, fixed) {
+  const number = parseFloat(str);
+  return (number * 100).toFixed(fixed);
+}
+
+/**
+ * 返回百分比数值字符串（默认值）
+ * @param {*} str
+ * @param {*} fixed
+ * @param {*} defaultValue
+ * @returns
+ */
+export function getPercentNumberByDefaultValue(str, fixed, defaultValue) {
+  let number = parseFloat(str);
+  if (number === 0) {
+    number = defaultValue;
+  }
+  return (number * 100).toFixed(fixed);
+}
+
+/**
+ * 返回百分比数值字符串（默认字符串）
+ * @param {*} str
+ * @param {*} fixed
+ * @param {*} defaultStr
+ * @returns
+ */
+export function getPercentNumberByDefaultStr(str, fixed, defaultStr) {
+  const number = parseFloat(str);
+  if (number === 0) {
+    return defaultStr;
+  }
+  return (number * 100).toFixed(fixed);
 }

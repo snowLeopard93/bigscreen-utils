@@ -4,11 +4,19 @@ export default class NumberFunc {
    * @param {*} str
    * @returns
    */
-  // eslint-disable-next-line class-methods-use-this
-  isNaN(str) {
+  static isNaN(str) {
     if (Number.isNaN(str) || Number.isNaN(Number.parseInt(str, 10))) {
       return true;
     }
     return false;
+  }
+
+  /**
+   * 将字符串转换成数值
+   * @param {*} str
+   * @returns
+   */
+  static parseFloat(str) {
+    return Number.parseFloat(str);
   }
 }
