@@ -35,5 +35,8 @@
       "npm run lint",
       "git add"
     ]
+  },
+  "dependencies": {
+    "moment": "^2.29.3"
   }
 }

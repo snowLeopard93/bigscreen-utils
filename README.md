@@ -47,38 +47,76 @@ console.log(floatValue); // 10000.89
 
 ## API
 
-### 1、数组相关 arrayUtil.js
+### 1、数组相关 `arrayUtil.js`
 
-#### （1）数组等分 equallyDivide(array, subGroupLength)
+#### （1）数组等分
 
-### 2、数值相关 numberUtil.js
+`equallyDivide(array, subGroupLength)`
 
-#### （1）将字符串转换成整型 parseInt(str)
+### 2、数值相关 `numberUtil.js`
 
-#### （2）将字符串转换成浮点数 parseFloat(str)
+#### （1）将字符串转换成整型
 
-#### （3）返回保留小数点后指定位数的字符串 parseFloatByFixed(str, fixed)
+`parseInt(str)`
 
-#### （4）加千分位分隔符 toLocaleString(str)
+#### （2）将字符串转换成浮点数
 
-#### （5）返回保留小数点后一位的字符串 parseFloatByFixedOneDecimalPlace(str)
+`parseFloat(str)`
 
-#### （6）返回保留小数点后两位的字符串 parseFloatByFixedTwoDecimalPlace(str)
+#### （3）返回保留小数点后指定位数的字符串
 
-#### （7）返回百分比数值字符串 getPercentNumber(str, fixed)
+`parseFloatByFixed(str, fixed)`
 
-#### （8）返回百分比数值字符串（默认值） getPercentNumberByDefaultValue(str, fixed, defaultValue)
+#### （4）加千分位分隔符
 
-#### （9）返回百分比数值字符串（默认字符串） getPercentNumberByDefaultStr(str, fixed, defaultStr)
+`toLocaleString(str)`
 
-### 3、对象相关 objectUtil.js
+#### （5）返回保留小数点后一位的字符串
 
-#### （1）断值是否是null或undefined isNullOrUndefined(value)
+`parseFloatByFixedOneDecimalPlace(str)`
 
-#### （2）判断值是否是null或undefined或空字符串 isNullOrUndefinedOrEmptyString(value)
+#### （6）返回保留小数点后两位的字符串
 
-### 4、字符串相关 stringUtil.js
+`parseFloatByFixedTwoDecimalPlace(str)`
 
-#### （1）字符串前面补0 addLeftZero(num, length)
+#### （7）返回百分比数值字符串
 
-#### （2）判断是否是JSON字符串 isJSONStr(str)
+`getPercentNumber(str, fixed)`
+
+#### （8）返回百分比数值字符串（默认值）
+
+`getPercentNumberByDefaultValue(str, fixed, defaultValue)`
+
+#### （9）返回百分比数值字符串（默认字符串）
+
+`getPercentNumberByDefaultStr(str, fixed, defaultStr)`
+
+### 3、对象相关 `objectUtil.js`
+
+#### （1）断值是否是null或undefined
+
+`isNullOrUndefined(value)`
+
+#### （2）判断值是否是null或undefined或空字符串
+
+`isNullOrUndefinedOrEmptyString(value)`
+
+### 4、字符串相关 `stringUtil.js`
+
+#### （1）字符串前面补0
+
+`addLeftZero(num, length)`
+
+#### （2）判断是否是JSON字符串
+
+`isJSONStr(str)`
+
+### 5、日期相关 `timeUtil.js`
+
+#### （1）传入开始时间、结束时间，返回一个时间数组
+
+`getTimeArray(startTimeStr, endTimeStr, type, interval, formatStr)`
+
+#### （2）传入开始时间、结束时间返回一个时间数组，时间间隔为1小时
+
+`getTimeArrayByHours(startTimeStr, endTimeStr)`
