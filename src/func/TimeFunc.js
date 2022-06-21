@@ -6,7 +6,7 @@ export default class TimeFunc {
     const startTime = moment(startTimeStr);
     const endTime = moment(endTimeStr);
     const diffValue = endTime.diff(startTime, type);
-    timeArray.push(startTimeStr);
+    timeArray.push(startTime.format(formatStr));
     if (diffValue >= 1) {
       for (let i = interval; i < diffValue; i += interval) {
         const time = moment(startTimeStr)
@@ -14,7 +14,7 @@ export default class TimeFunc {
           .format(formatStr);
         timeArray.push(time);
       }
-      timeArray.push(endTimeStr);
+      timeArray.push(endTime.format(formatStr));
     }
     return timeArray;
   }
