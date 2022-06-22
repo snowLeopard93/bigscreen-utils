@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   // entry: path.join(__dirname, './index.js'),
@@ -8,6 +9,7 @@ module.exports = {
     arrayutil: path.join(__dirname, './src/util/arrayUtil'),
     stringUtil: path.join(__dirname, './src/util/stringUtil'),
     objectUtil: path.join(__dirname, './src/util/objectUtil'),
+    timeUtil: path.join(__dirname, './src/util/timeUtil'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -15,4 +17,7 @@ module.exports = {
     // libraryTarget: 'commonjs2',
     libraryTarget: 'umd',
   },
+  plugins: [
+    new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /zh-cn|ja/),
+  ],
 };
