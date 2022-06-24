@@ -1,7 +1,5 @@
 import NumberFunc from '../func/NumberFunc';
 
-// const numberFunc = new NumberFunc();
-
 /**
  * 将字符串转换成整型
  * @param {*} str
