@@ -1,11 +1,9 @@
 language: node_js
     node_js:
-      - '16' # 在哪个版本的node下运行
+      - 14 # 在哪个版本的node下运行
     install:
-      - npm install --registry=https://registry.npm.taobao.org
-      - echo "install successed"
+      - npm install
     script: # 需要执行的脚本
-      - npm run test
       - npm run build
     branches: #构建哪些分支
       only:
