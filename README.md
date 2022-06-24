@@ -1,3 +1,6 @@
+![latest tag](https://badgen.net/github/tag/snowLeopard93/bigscreen-utils)  ![npm version](https://badgen.net/npm/node/next) ![airbnb](https://badgen.net/badge/icon/airbnb?icon=airbnb&label) ![install size](https://badgen.net/packagephobia/install/bigscreen-utils)
+
+
 # bigscreen-utils
 
 It provides some of the functions used by bigscreens, includes numbers, strings, arrays, and objects.It may allow you to avoid resealing related methods in bigscreen page development.
