@@ -2,3 +2,5 @@
 .lh/
 
 node_modules/
+
+coverage/

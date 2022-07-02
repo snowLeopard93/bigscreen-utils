@@ -2,6 +2,10 @@
 import * as timeUtil from '../src/util/timeUtil';
 
 test('getTimeArray', () => {
+  expect(timeUtil.getTimeArray('2022-06-21 12:00:00', '2022-06-21 12:00:00', 'hours', 1, 'YYYY-MM-DD HH:00:00')).toEqual(
+    ['2022-06-21 12:00:00'],
+  );
+
   expect(timeUtil.getTimeArray('12:00:00', '2022-06-21 16:00:00', 'hours', 1, 'YYYY-MM-DD HH:00:00')).toEqual(
     [],
   );

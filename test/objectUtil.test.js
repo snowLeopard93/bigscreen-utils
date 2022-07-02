@@ -12,5 +12,5 @@ test('isNullOrUndefinedOrEmptyString', () => {
   expect(objectUtil.isNullOrUndefinedOrEmptyString(null)).toBe(true);
   expect(objectUtil.isNullOrUndefinedOrEmptyString(undefined)).toBe(true);
   expect(objectUtil.isNullOrUndefinedOrEmptyString('')).toBe(true);
-  expect(objectUtil.isNullOrUndefined('10')).toBe(false);
+  expect(objectUtil.isNullOrUndefinedOrEmptyString('10')).toBe(false);
 });
