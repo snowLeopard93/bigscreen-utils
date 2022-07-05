@@ -123,3 +123,33 @@ console.log(floatValue); // 10000.89
 #### （2）传入开始时间、结束时间返回一个时间数组，时间间隔为1小时
 
 `getTimeArrayByHours(startTimeStr, endTimeStr)`
+
+### 6、金融相关 `financeUtil.js`
+
+#### （1）将传入的值除以10000之后返回
+
+`getValueByTenThousand(oldValue)`
+
+#### （2）将传入的值除以10000之后返回保留一位小数的字符串
+
+`getStrByTenThousandFixedOneDecimalPlace(oldValue)`
+
+#### （3）将传入的值除以10000之后返回保留两位小数的字符串
+
+`getStrByTenThousandFixedTwoDecimalPlace(oldValue)`
+
+#### （4）将传入的值除以10000之后返回保留一位小数的值
+
+`getValueByTenThousandFixedOneDecimalPlace(oldValue, ignoreZero)`
+
+#### （5）将传入的值除以10000之后返回保留两位小数的值
+
+`getValueByTenThousandFixedTwoDecimalPlace(oldValue, ignoreZero)`
+
+#### （6）将传入的值除以10000之后返回保留一位小数的值，0不做处理
+
+`getValueByTenThousandFixedOneIgnoreZero(oldValue)`
+
+#### （7）将传入的值除以10000之后返回保留两位小数的值，0不做处理
+
+`getValueByTenThousandFixedTwoIgnoreZero(oldValue)`

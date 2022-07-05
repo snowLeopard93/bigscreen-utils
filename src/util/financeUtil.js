@@ -79,7 +79,7 @@ export function getValueByTenThousandFixedOneIgnoreZero(oldValue) {
 }
 
 /**
- * 将传入的值除以10000之后返回保留一位小数的值，0不做处理
+ * 将传入的值除以10000之后返回保留两位小数的值，0不做处理
  * @param {*} oldValue
  * @returns
  */
