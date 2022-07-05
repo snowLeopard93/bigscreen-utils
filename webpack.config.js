@@ -10,6 +10,7 @@ module.exports = {
     stringUtil: path.join(__dirname, './src/util/stringUtil'),
     objectUtil: path.join(__dirname, './src/util/objectUtil'),
     timeUtil: path.join(__dirname, './src/util/timeUtil'),
+    financeUtil: path.join(__dirname, './src/util/financeUtil'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
