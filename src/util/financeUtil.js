@@ -1,8 +1,5 @@
-import {
-  parseFloat,
-  parseFloatByFixedOneDecimalPlace,
-  parseFloatByFixedTwoDecimalPlace,
-} from './numberUtil';
+import TenThousand from '../financeFunc/TenThousand';
+import HundredMillion from '../financeFunc/HundredMillion';
 
 /**
  * 将传入的值除以10000之后返回
@@ -10,8 +7,7 @@ import {
  * @returns
  */
 export function getValueByTenThousand(oldValue) {
-  const value = parseFloat(oldValue / 10000);
-  return value;
+  return TenThousand.getValueByTenThousand(oldValue);
 }
 
 /**
@@ -20,9 +16,7 @@ export function getValueByTenThousand(oldValue) {
  * @returns
  */
 export function getStrByTenThousandFixedOneDecimalPlace(oldValue) {
-  const value = getValueByTenThousand(oldValue);
-  const str = parseFloatByFixedOneDecimalPlace(value);
-  return str;
+  return TenThousand.getStrByTenThousandFixedOneDecimalPlace(oldValue);
 }
 
 /**
@@ -31,9 +25,7 @@ export function getStrByTenThousandFixedOneDecimalPlace(oldValue) {
  * @returns
  */
 export function getStrByTenThousandFixedTwoDecimalPlace(oldValue) {
-  const value = getValueByTenThousand(oldValue);
-  const str = parseFloatByFixedTwoDecimalPlace(value);
-  return str;
+  return TenThousand.getStrByTenThousandFixedTwoDecimalPlace(oldValue);
 }
 
 /**
@@ -43,13 +35,7 @@ export function getStrByTenThousandFixedTwoDecimalPlace(oldValue) {
  * @returns
  */
 export function getValueByTenThousandFixedOneDecimalPlace(oldValue, ignoreZero) {
-  const value = getValueByTenThousand(oldValue);
-  if (ignoreZero && value === 0) {
-    return value;
-  }
-  const str = parseFloatByFixedOneDecimalPlace(value);
-  const newValue = parseFloat(str);
-  return newValue;
+  return TenThousand.getValueByTenThousandFixedOneDecimalPlace(oldValue, ignoreZero);
 }
 
 /**
@@ -59,13 +45,7 @@ export function getValueByTenThousandFixedOneDecimalPlace(oldValue, ignoreZero) 
  * @returns
  */
 export function getValueByTenThousandFixedTwoDecimalPlace(oldValue, ignoreZero) {
-  const value = getValueByTenThousand(oldValue);
-  if (ignoreZero && value === 0) {
-    return value;
-  }
-  const str = parseFloatByFixedTwoDecimalPlace(value);
-  const newValue = parseFloat(str);
-  return newValue;
+  return TenThousand.getValueByTenThousandFixedTwoDecimalPlace(oldValue, ignoreZero);
 }
 
 /**
@@ -74,8 +54,7 @@ export function getValueByTenThousandFixedTwoDecimalPlace(oldValue, ignoreZero) 
  * @returns
  */
 export function getValueByTenThousandFixedOneIgnoreZero(oldValue) {
-  const value = getValueByTenThousandFixedOneDecimalPlace(oldValue, true);
-  return value;
+  return TenThousand.getValueByTenThousandFixedOneIgnoreZero(oldValue);
 }
 
 /**
@@ -84,6 +63,70 @@ export function getValueByTenThousandFixedOneIgnoreZero(oldValue) {
  * @returns
  */
 export function getValueByTenThousandFixedTwoIgnoreZero(oldValue) {
-  const value = getValueByTenThousandFixedTwoDecimalPlace(oldValue, true);
-  return value;
+  return TenThousand.getValueByTenThousandFixedTwoIgnoreZero(oldValue);
+}
+
+/**
+ * 将传入的值除以100000000之后返回
+ * @param {*} oldValue
+ * @returns
+ */
+export function getValueByHundredMillion(oldValue) {
+  return HundredMillion.getValueByHundredMillion(oldValue);
+}
+
+/**
+ * 将传入的值除以100000000之后返回保留一位小数的字符串
+ * @param {*} oldValue
+ * @returns
+ */
+export function getStrByHundredMillionFixedOneDecimalPlace(oldValue) {
+  return HundredMillion.getStrByHundredMillionFixedOneDecimalPlace(oldValue);
+}
+
+/**
+ * 将传入的值除以100000000之后返回保留两位小数的字符串
+ * @param {*} oldValue
+ * @returns
+ */
+export function getStrByHundredMillionFixedTwoDecimalPlace(oldValue) {
+  return HundredMillion.getStrByHundredMillionFixedTwoDecimalPlace(oldValue);
+}
+
+/**
+ * 将传入的值除以100000000之后返回保留一位小数的值
+ * @param {*} oldValue
+ * @param {*} ignoreZero 是否忽略值为0的情况
+ * @returns
+ */
+export function getValueByHundredMillionFixedOneDecimalPlace(oldValue, ignoreZero) {
+  return HundredMillion.getValueByHundredMillionFixedOneDecimalPlace(oldValue, ignoreZero);
+}
+
+/**
+ * 将传入的值除以100000000之后返回保留两位小数的值
+ * @param {*} oldValue
+ * @param {*} ignoreZero 是否忽略值为0的情况
+ * @returns
+ */
+export function getValueByHundredMillionFixedTwoDecimalPlace(oldValue, ignoreZero) {
+  return HundredMillion.getValueByHundredMillionFixedTwoDecimalPlace(oldValue, ignoreZero);
+}
+
+/**
+ * 将传入的值除以100000000之后返回保留一位小数的值，0不做处理
+ * @param {*} oldValue
+ * @returns
+ */
+export function getValueByHundredMillionFixedOneIgnoreZero(oldValue) {
+  return HundredMillion.getValueByHundredMillionFixedOneIgnoreZero(oldValue);
+}
+
+/**
+ * 将传入的值除以100000000之后返回保留两位小数的值，0不做处理
+ * @param {*} oldValue
+ * @returns
+ */
+export function getValueByHundredMillionFixedTwoIgnoreZero(oldValue) {
+  return HundredMillion.getValueByHundredMillionFixedTwoIgnoreZero(oldValue);
 }
