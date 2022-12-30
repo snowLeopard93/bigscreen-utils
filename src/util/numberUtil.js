@@ -85,7 +85,7 @@ export function getPercentNumber(str, fixed) {
  * @param {*} defaultValue
  * @returns
  */
-export function getPercentNumberByDefaultValue(str, fixed, defaultValue) {
+export function getPercentNumberByDefaultValue(str, fixed, defaultValue = 1) {
   let number = parseFloat(str);
   if (number === 0) {
     number = defaultValue;

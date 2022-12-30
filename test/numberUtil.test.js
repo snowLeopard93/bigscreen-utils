@@ -62,6 +62,7 @@ test('getPercentNumberByDefaultValue', () => {
   expect(numberUtil.getPercentNumberByDefaultValue(0.6321, 2, 1)).toBe('63.21');
   expect(numberUtil.getPercentNumberByDefaultValue('0.9988', 2, 1)).toBe('99.88');
   expect(numberUtil.getPercentNumberByDefaultValue('--', 2, 1)).toBe('100.00');
+  expect(numberUtil.getPercentNumberByDefaultValue('', 2)).toBe('100.00');
 });
 
 test('getPercentNumberByDefaultStr', () => {
