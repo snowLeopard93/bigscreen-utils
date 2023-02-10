@@ -65,17 +65,20 @@ console.log(floatValue); // 10000.89
 
 ### 2、数值相关 `numberUtil.js`
 
-| **功能**          | **方法名** |
-| ------------- |-------------|
-| **将字符串转换成整型** | parseInt(str) |
-| **将字符串转换成浮点数** | parseFloat(str) |
-| **返回保留小数点后指定位数的字符串** | parseFloatByFixed(str, fixed) |
-| **加千分位分隔符** | toLocaleString(str) |
-| **返回保留小数点后一位的字符串** | parseFloatByFixedOneDecimalPlace(str) |
-| **返回保留小数点后两位的字符串** | parseFloatByFixedTwoDecimalPlace(str) |
-| **返回百分比数值字符串** | getPercentNumber(str, fixed) |
-| **返回百分比数值字符串（默认值）** | getPercentNumberByDefaultValue(str, fixed, defaultValue) |
-| **返回百分比数值字符串（默认字符串）** | getPercentNumberByDefaultStr(str, fixed, defaultStr) |
+| **功能**          | **方法名** | **返回值类型** |
+| ------------- |-------------|-------------|
+| **将字符串转换成整型** | parseInt(str) | number |
+| **将字符串转换成浮点数** | parseFloat(str) | number |
+| **返回保留小数点后指定位数的字符串** | parseFloatByFixed(str, fixed) | string |
+| **加千分位分隔符** | toLocaleString(str) | string |
+| **返回保留小数点后一位的字符串** | parseFloatByFixedOneDecimalPlace(str) | string |
+| **返回保留小数点后两位的字符串** | parseFloatByFixedTwoDecimalPlace(str) | string |
+| **返回百分比数值字符串** | getPercentNumber(str, fixed) | string |
+| **返回百分比数值字符串（默认值）** | getPercentNumberByDefaultValue(str, fixed, defaultValue) | string |
+| **返回百分比数值字符串（默认字符串）** | getPercentNumberByDefaultStr(str, fixed, defaultStr) | string |
+| **返回百分比数值** | getPercentNumberValue(str, fixed) | number |
+| **返回百分比数值（默认值）** | getPercentNumberValueByDefaultValue(str, fixed, defaultValue) | number |
+| **返回百分比数值（默认字符串）** | getPercentNumberValueByDefaultStr(str, fixed, defaultStr) | number |
 
 #### 2.1 parseInt
 

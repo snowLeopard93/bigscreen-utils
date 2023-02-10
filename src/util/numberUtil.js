@@ -79,6 +79,17 @@ export function getPercentNumber(str, fixed) {
 }
 
 /**
+ * 返回百分比数值
+ * @param {*} str
+ * @param {*} fixed
+ * @returns
+ */
+export function getPercentNumberValue(str, fixed) {
+  const number = parseFloat(str);
+  return parseFloat((number * 100).toFixed(fixed));
+}
+
+/**
  * 返回百分比数值字符串（默认值）
  * @param {*} str
  * @param {*} fixed
@@ -94,6 +105,21 @@ export function getPercentNumberByDefaultValue(str, fixed, defaultValue = 1) {
 }
 
 /**
+ * 返回百分比数值（默认值）
+ * @param {*} str
+ * @param {*} fixed
+ * @param {*} defaultValue
+ * @returns
+ */
+export function getPercentNumberValueByDefaultValue(str, fixed, defaultValue = 1) {
+  let number = parseFloat(str);
+  if (number === 0) {
+    number = defaultValue;
+  }
+  return parseFloat((number * 100).toFixed(fixed));
+}
+
+/**
  * 返回百分比数值字符串（默认字符串）
  * @param {*} str
  * @param {*} fixed
@@ -106,4 +132,19 @@ export function getPercentNumberByDefaultStr(str, fixed, defaultStr) {
     return defaultStr;
   }
   return (number * 100).toFixed(fixed);
+}
+
+/**
+ * 返回百分比数值（默认字符串）
+ * @param {*} str
+ * @param {*} fixed
+ * @param {*} defaultStr
+ * @returns
+ */
+export function getPercentNumberValueByDefaultStr(str, fixed, defaultStr) {
+  const number = parseFloat(str);
+  if (number === 0) {
+    return defaultStr;
+  }
+  return parseFloat((number * 100).toFixed(fixed));
 }

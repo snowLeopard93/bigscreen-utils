@@ -54,6 +54,18 @@ test('getPercentNumber', () => {
   expect(numberUtil.getPercentNumber('--', 2)).toBe('0.00');
   expect(numberUtil.getPercentNumber(null, 2)).toBe('0.00');
   expect(numberUtil.getPercentNumber(undefined, 2)).toBe('0.00');
+  expect(numberUtil.getPercentNumber(1, 2)).toBe('100.00');
+});
+
+test('getPercentNumberValue', () => {
+  expect(numberUtil.getPercentNumberValue(0.98785, 2)).toBe(98.78);
+  expect(numberUtil.getPercentNumberValue(0.98786, 2)).toBe(98.79);
+  expect(numberUtil.getPercentNumberValue(0.6321, 2)).toBe(63.21);
+  expect(numberUtil.getPercentNumberValue('0.9988', 2)).toBe(99.88);
+  expect(numberUtil.getPercentNumberValue('--', 2)).toBe(0);
+  expect(numberUtil.getPercentNumberValue(null, 2)).toBe(0);
+  expect(numberUtil.getPercentNumberValue(undefined, 2)).toBe(0);
+  expect(numberUtil.getPercentNumberValue(1, 2)).toBe(100);
 });
 
 test('getPercentNumberByDefaultValue', () => {
@@ -65,7 +77,22 @@ test('getPercentNumberByDefaultValue', () => {
   expect(numberUtil.getPercentNumberByDefaultValue('', 2)).toBe('100.00');
 });
 
+test('getPercentNumberValueByDefaultValue', () => {
+  expect(numberUtil.getPercentNumberValueByDefaultValue(0.98785, 2, 1)).toBe(98.78);
+  expect(numberUtil.getPercentNumberValueByDefaultValue(0.98786, 2, 1)).toBe(98.79);
+  expect(numberUtil.getPercentNumberValueByDefaultValue(0.6321, 2, 1)).toBe(63.21);
+  expect(numberUtil.getPercentNumberValueByDefaultValue('0.9988', 2, 1)).toBe(99.88);
+  expect(numberUtil.getPercentNumberValueByDefaultValue('--', 2, 1)).toBe(100);
+  expect(numberUtil.getPercentNumberValueByDefaultValue('', 2)).toBe(100);
+  expect(numberUtil.getPercentNumberValueByDefaultValue('0', 2)).toBe(100);
+});
+
 test('getPercentNumberByDefaultStr', () => {
   expect(numberUtil.getPercentNumberByDefaultStr(null, 2, '——')).toBe('——');
   expect(numberUtil.getPercentNumberByDefaultStr('0.9988', 2, '——')).toBe('99.88');
+});
+
+test('getPercentNumberValueByDefaultStr', () => {
+  expect(numberUtil.getPercentNumberValueByDefaultStr(null, 2, '——')).toBe('——');
+  expect(numberUtil.getPercentNumberValueByDefaultStr('0.9988', 2, '——')).toBe(99.88);
 });
