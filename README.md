@@ -101,6 +101,13 @@ console.log(floatValue); // 10000.89
 | fixed |小数点后保留位数|
 
 #### 2.4 parseFloatValueByFixed
+
+| **参数** | **说明** |
+| ------------- |-------------|
+| str |字符串|
+| fixed |小数点后保留位数|
+| defaultValue |默认值|
+
 #### 2.5 toLocaleString
 
 | **参数** | **说明** |
