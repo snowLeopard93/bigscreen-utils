@@ -38,6 +38,20 @@ export function parseFloatByFixed(str, fixed) {
 }
 
 /**
+ * 返回保留小数点后指定位数的值
+ * @param {*} str
+ * @param {*} fixed
+ * @param {*} defaultValue
+ * @returns
+ */
+export function parseFloatValueByFixed(str, fixed, defaultValue = 1) {
+  if (NumberFunc.isNaN(str)) {
+    return parseFloat(defaultValue.toFixed(fixed));
+  }
+  return parseFloat(NumberFunc.parseFloat(str).toFixed(fixed));
+}
+
+/**
  * 加千分位分隔符
  * @param {*} str
  * @returns

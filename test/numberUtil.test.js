@@ -26,6 +26,16 @@ test('parseFloatByFixed', () => {
   expect(numberUtil.parseFloatByFixed(undefined)).toBe('');
 });
 
+test('parseFloatValueByFixed', () => {
+  expect(numberUtil.parseFloatValueByFixed(10000.888, 2, 1)).toBe(10000.89);
+  expect(numberUtil.parseFloatValueByFixed('10000.666', 2)).toBe(10000.67);
+  expect(numberUtil.parseFloatValueByFixed('10000', 2, 1)).toBe(10000.00);
+  expect(numberUtil.parseFloatValueByFixed('10000', 1, 1)).toBe(10000.0);
+  expect(numberUtil.parseFloatValueByFixed('--', 2, 1)).toBe(1);
+  expect(numberUtil.parseFloatValueByFixed(null, 2, 1)).toBe(1);
+  expect(numberUtil.parseFloatValueByFixed(undefined, 2, 1)).toBe(1);
+});
+
 test('toLocaleString', () => {
   expect(numberUtil.toLocaleString(10000.888)).toBe('10,000.888');
   expect(numberUtil.toLocaleString('10000.666')).toBe('10,000.666');

@@ -70,6 +70,7 @@ console.log(floatValue); // 10000.89
 | **将字符串转换成整型** | parseInt(str) | number |
 | **将字符串转换成浮点数** | parseFloat(str) | number |
 | **返回保留小数点后指定位数的字符串** | parseFloatByFixed(str, fixed) | string |
+| **返回保留小数点后指定位数的值** | parseFloatValueByFixed(str, fixed, defaultValue) | number |
 | **加千分位分隔符** | toLocaleString(str) | string |
 | **返回保留小数点后一位的字符串** | parseFloatByFixedOneDecimalPlace(str) | string |
 | **返回保留小数点后两位的字符串** | parseFloatByFixedTwoDecimalPlace(str) | string |
@@ -99,32 +100,33 @@ console.log(floatValue); // 10000.89
 | str |字符串|
 | fixed |小数点后保留位数|
 
-#### 2.4 toLocaleString
+#### 2.4 parseFloatValueByFixed
+#### 2.5 toLocaleString
 
 | **参数** | **说明** |
 | ------------- |-------------|
 | str |字符串|
 
-#### 2.5 parseFloatByFixedOneDecimalPlace
+#### 2.6 parseFloatByFixedOneDecimalPlace
 
 | **参数** | **说明** |
 | ------------- |-------------|
 | str |字符串|
 
-#### 2.6 parseFloatByFixedTwoDecimalPlace
+#### 2.7 parseFloatByFixedTwoDecimalPlace
 
 | **参数** | **说明** |
 | ------------- |-------------|
 | str |字符串|
 
-#### 2.7 getPercentNumber
+#### 2.8 getPercentNumber
 
 | **参数** | **说明** |
 | ------------- |-------------|
 | str |字符串|
 | fixed |小数点后保留位数|
 
-#### 2.8 getPercentNumberByDefaultValue
+#### 2.9 getPercentNumberByDefaultValue
 
 | **参数** | **说明** |
 | ------------- |-------------|
@@ -132,13 +134,36 @@ console.log(floatValue); // 10000.89
 | fixed |小数点后保留位数|
 | defaultValue |默认值|
 
-#### 2.9 getPercentNumberByDefaultStr
+#### 2.10 getPercentNumberByDefaultStr
 
 | **参数** | **说明** |
 | ------------- |-------------|
 | str |字符串|
 | fixed |小数点后保留位数|
 | defaultStr |默认字符串|
+
+#### 2.11 getPercentNumberValue
+
+| **参数** | **说明** |
+| ------------- |-------------|
+| str |字符串|
+| fixed |小数点后保留位数|
+
+#### 2.12 getPercentNumberValueByDefaultValue
+
+| **参数** | **说明** |
+| ------------- |-------------|
+| str |字符串|
+| fixed |小数点后保留位数|
+| fixed |默认值|
+
+#### 2.13 getPercentNumberValueByDefaultStr
+
+| **参数** | **说明** |
+| ------------- |-------------|
+| str |字符串|
+| fixed |小数点后保留位数|
+| fixed |默认字符串|
 
 ### 3、对象相关 `objectUtil.js`
 
